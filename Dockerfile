@@ -8,7 +8,7 @@ COPY Caddyfile ./
 
 RUN caddy fmt --overwrite Caddyfile
 
-FROM browserless/chrome:latest
+FROM ghcr.io/browserless/base:latest
 
 COPY --from=caddy /srv/Caddyfile ./
 
